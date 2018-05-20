@@ -1,0 +1,4 @@
+<div class="btn-group">
+  <label class="btn btn-primary" *ngFor="let item of itemList" [(ngModel)]="currentSelection[item.code]" btnCheckbox tabindex="0"
+    role="button" (click)="onToggleButtonChange($event)">{{item.name}}</label>
+</div>

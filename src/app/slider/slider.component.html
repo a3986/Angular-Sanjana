@@ -1,0 +1,4 @@
+<div class="container">
+  <div class="row">{{componentConfig.label}}</div>
+  <nouislider class="slider-filter" [config]="componentConfig" [connect]="componentConfig.connect" [min]="componentConfig.min" [max]="componentConfig.max" [step]="componentConfig.step" [(ngModel)]="componentConfig.selectedRange" (change)="onSliderChange($event)"></nouislider>
+</div>

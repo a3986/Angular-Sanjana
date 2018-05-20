@@ -1,0 +1,117 @@
+<!-- <div class="container">
+  <div class="row">
+    <button class="btn btn-dark" [class.active]="categoryFilter=='veg'" (click)='onInputChange($event, "category")'>Veg</button>
+    <button class="btn btn-dark" [class.active]="categoryFilter=='nonveg'" (click)="filterBy='nonveg'">C2</button>
+  </div>
+  <div class="row">
+    <button class="btn btn-dark" [class.active]="baseFilter=='all'" (click)="baseFilter='all'">All</button>
+    <button class="btn btn-dark" [class.active]="baseFilter=='regular'" (click)="baseFilter='regular'">Regular</button>
+    <button class="btn btn-dark" [class.active]="baseFilter=='thin'" (click)="baseFilter='thin'">Thin Crust</button>
+    <button class="btn btn-dark" [class.active]="baseFilter=='flatbread'" (click)="baseFilter='flatbread'">Flat Bread</button>
+    <button class="btn btn-dark" [class.active]="baseFilter=='multigrain'" (click)="baseFilter='multigrain'">Multigrain</button>
+  </div>
+  <div class="row">
+    <button class="btn btn-dark" [class.active]="baseFilter=='all'" (click)="baseFilter='all'">All</button>
+    <button class="btn btn-dark" [class.active]="baseFilter=='cheeseburst'" (click)="baseFilter='cheeseburst'">Cheese Burst</button>
+    <button class="btn btn-dark" [class.active]="baseFilter=='cheesetopping'" (click)="baseFilter='cheesetopping'">Cheese Topping</button>
+    <button class="btn btn-dark" [class.active]="baseFilter=='nocheese'" (click)="baseFilter='nocheese'">No Cheese</button>
+  </div>
+</div> -->
+
+
+<!-- <h5>Filter by categories</h5>
+<form *ngIf="showFilters">
+  <div class="category-filter filter-wrapper" *ngFor='let filter of categories'>
+    <label class="fake-checkbox">
+      <input type="checkbox" checked (change)='onInputChange($event, filter, "category")'>
+      <span class="square">
+        <span class="fill"></span>
+      </span>
+      <span class="label">{{filter.name}}</span>
+      <span></span>
+    </label>
+  </div>
+</form>
+<h5>Filter by price</h5>
+<form *ngIf="showFilters">
+  <div class="custom-filter filter-wrapper" *ngFor='let filter of priceFilters'>
+    <label class="fake-checkbox">
+      <input type="radio" name="price" [checked]='filter.checked' (click)='onInputChange($event, filter, "price")'>
+      <span class="circle">
+        <span class="fill"></span>
+      </span>
+      <span class="label">{{filter.name}}</span>
+      <span></span>
+    </label>
+  </div>
+</form>
+
+<h5>Custom filters</h5>
+<form *ngIf="showFilters">
+  <div class="custom-filter filter-wrapper" *ngFor='let filter of customFilters'>
+    <label class="fake-checkbox">
+      <input type="radio" name="custom" [checked]='filter.checked' (click)='onInputChange($event, filter, "custom")'>
+      <span class="circle">
+        <span class="fill"></span>
+      </span>
+      <span class="label">{{filter.name}}</span>
+      <span></span>
+    </label>
+  </div>
+</form> -->
+
+<!-- <div class="btn-group">
+    <label class="btn btn-primary" [(ngModel)]="categoryFilter.veg"
+           btnCheckbox tabindex="0" role="button" (click)="onCategoryFilterChange($event)">Veg</label>
+    <label class="btn btn-primary" [(ngModel)]="categoryFilter.nonveg"
+           btnCheckbox tabindex="0" role="button" (click)="onCategoryFilterChange($event)">Non Veg</label>
+  </div> -->
+
+<!-- <nouislider [config]="someRange2config" [connect]="true" [min]="100" [max]="600" [step]="50" [(ngModel)]="someRange" (change)="onPriceFilterChange($event)"></nouislider>
+
+<div class="btn-group" dropdown>
+    <button id="button-basic" dropdownToggle type="button" class="btn btn-primary dropdown-toggle"
+            aria-controls="dropdown-basic">
+      Button dropdown <span class="caret"></span>
+    </button>
+    <ul id="dropdown-basic" *dropdownMenu class="dropdown-menu"
+        role="menu" aria-labelledby="button-basic">
+        <li role="menuitem" *ngFor="let base of availableBase">
+            <a class="dropdown-item" (click)="onBaseFilterChange($event, base.code)">{{base.name}}</a>
+        </li>
+    </ul>
+  </div>
+
+  <div class="btn-group">
+      <label class="btn btn-primary" *ngFor="let item of itemList" [(ngModel)]="categoryFilter[item.code]" btnCheckbox tabindex="0"
+        role="button" (click)="onCategoryFilterChange($event)">{{item.name}}</label>
+    </div> -->
+
+<!-- <ul>
+  <li *ngFor="let filterConfig of filteringOptions">
+    <div [ngSwitch]="filterConfig?.component">
+      <app-slider *ngSwitchCase="'slider'" [componentConfig]="filterConfig.componentConfig" [filterBy]="filterConfig.filterBy" (onFilterChange)='onMultiTypeFilterChange($event)'></app-slider>
+
+      <app-toggle-button *ngSwitchCase="'toggle-button'" [itemList]="filterConfig.itemList" [componentConfig]="filterConfig.componentConfig" [filterBy]="filterConfig.filterBy" (onFilterChange)='onRangeTypeFilterChange($event)'></app-toggle-button>
+
+      <app-select-box *ngSwitchCase="'select-box'" [itemList]="filterConfig.itemList" [componentConfig]="filterConfig.componentConfig" [filterBy]="filterConfig.filterBy" (onFilterChange)='onEqTypeFilterChange($event)'></app-select-box>
+    </div>
+  </li>
+</ul> -->
+
+<div class="filters">
+  <div class="filter-section">
+      <h5>Filters</h5>
+  <div *ngFor="let filterConfig of filteringOptions">
+  
+
+  <div class="filter-section" [ngSwitch]="filterConfig?.component">
+      <app-slider *ngSwitchCase="'slider'" [componentConfig]="filterConfig.componentConfig" [filterBy]="filterConfig.filterBy" (onFilterChange)='eventMap[filterConfig.type]($event)'></app-slider>
+
+      <app-toggle-button *ngSwitchCase="'toggle-button'" [itemList]="filterConfig.itemList" [componentConfig]="filterConfig.componentConfig" [filterBy]="filterConfig.filterBy" (onFilterChange)='eventMap[filterConfig.type]($event)'></app-toggle-button>
+
+      <app-select-box *ngSwitchCase="'select-box'" [itemList]="filterConfig.itemList" [componentConfig]="filterConfig.componentConfig" [filterBy]="filterConfig.filterBy" (onFilterChange)='eventMap[filterConfig.type]($event)'></app-select-box>
+    </div>
+  </div>
+</div>
+</div>

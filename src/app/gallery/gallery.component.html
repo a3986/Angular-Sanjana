@@ -1,0 +1,27 @@
+<!-- <h2>{{title}}</h2>
+<div class="row">
+    <div class="container">
+        <button class="btn btn-lg btn-info" [class.active]="filterBy=='all'" (click)="filterBy='all'">All</button>
+        <button class="btn btn-lg btn-info" [class.active]="filterBy=='c1'" (click)="filterBy='c1'">C1</button>
+        <button class="btn btn-lg btn-info" [class.active]="filterBy=='c2'" (click)="filterBy='c2'">C2</button>
+    </div>
+    <ul id="thumbnailList">
+        <li *ngFor="let image of (visibleImages | imageFilter:baseFilter)">
+            <a [routerLink]="['/image', image.id]">
+            <img src="{{image.url}}" class="tn" height="160" width="200">
+        </a>
+        </li>
+    </ul>
+</div> -->
+
+<div class="row">
+    <!-- <product-thumbnail [product]="product" *ngFor="let product of products" class="col-4 product-thumbnail">
+    </product-thumbnail> -->
+    <div id="thumbnailList">
+        <app-detailed-view *ngFor="let product of products" [product]="product" class="col-lg-4 thumbnail">
+            <!-- </a> -->
+        </app-detailed-view>
+    </div>
+</div>
+
+
