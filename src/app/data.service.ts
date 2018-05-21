@@ -56,7 +56,7 @@ const MockData: any = {
           true
         ],
         "behaviour": "drag",
-        "selectedRange":[100, 600]
+        "selectedRange": [100, 600]
       }
     },
     {
@@ -64,6 +64,10 @@ const MockData: any = {
       "filterBy": "base",
       "component": "select-box",
       "itemList": [
+        {
+          "name": "All",
+          "code": "all"
+        },
         {
           "name": "Regular",
           "code": "regular"
@@ -91,6 +95,10 @@ const MockData: any = {
       "component": "select-box",
       "itemList": [
         {
+          "name": "All",
+          "code": "all"
+        },
+        {
           "name": "Cheese Burst",
           "code": "cheeseburst"
         },
@@ -108,64 +116,120 @@ const MockData: any = {
       }
     }
   ],
-  "products": [{
-  "id": 1,
-  "category": "veg",
-  "base": "regular",
-  "type": "cheeseburst",
-  "url": "http://lorempixel.com/200/100/food/","price":"100",
-  "name":"Pizza 1"
-}, {
-  "id": 2,
-  "category": "veg",
-  "base": "thin",
-  "type": "cheeseburst",
-  "url": "http://lorempixel.com/200/100/food/","price":"100",
-  "name":"Pizza 2"
-}, {
-  "id": 3,
-  "category": "nonveg",
-  "base": "regular",
-  "type": "cheesetopping",
-  "url": "http://lorempixel.com/200/100/food/","price":"100",
-  "name":"Pizza 3"
-}, {
-  "id": 4,
-  "category": "nonveg",
-  "base": "multigrain",
-  "type": "nocheese",
-  "url": "http://lorempixel.com/200/100/food/","price":"100",
-  "name":"Pizza 4"
-}, {
-  "id": 5,
-  "category": "veg",
-  "base": "flatbread",
-  "type": "cheesetopping",
-  "url": "http://lorempixel.com/200/100/food/","price":"100",
-  "name":"Pizza 1"
-}, {
-  "id": 6,
-  "category": "veg",
-  "base": "thin",
-  "type": "cheeseburst",
-  "url": "http://lorempixel.com/200/100/food/","price":"100",
-  "name":"Pizza 6"
-}, {
-  "id": 7,
-  "category": "nonveg",
-  "base": "regular",
-  "type": "cheesetopping",
-  "url": "http://lorempixel.com/200/100/food/","price":"100",
-  "name":"Pizza 7"
-}, {
-  "id": 8,
-  "category": "nonveg",
-  "base": "multigrain",
-  "type": "nocheese",
-  "url": "http://lorempixel.com/200/100/food/","price":"100",
-  "name":"Pizza 8"
-}
-]
+  "products": [
+    {
+      "id": 1,
+      "category": "veg",
+      "base": "regular",
+      "type": "cheeseburst",
+      "url": "../assets/img/1.jpg",
+      "price": 150,
+      "displayValue": {
+        "name": "Pizza 1",
+        "category": "Veg",
+        "base": "Regular",
+        "type": "Cheese Burst"
+      }
+    },
+    {
+      "id": 2,
+      "category": "veg",
+      "base": "thin",
+      "type": "cheeseburst",
+      "url": "../assets/img/1.jpg",
+      "price": 250,
+      "displayValue": {
+        "name": "Pizza 2",
+        "category": "Veg",
+        "base": "Thin Crust",
+        "type": "Cheese Burst"
+      }
+    },
+    {
+      "id": 3,
+      "category": "nonveg",
+      "base": "regular",
+      "type": "cheesetopping",
+      "url": "../assets/img/2.jpg",
+      "price": 350,
+      "displayValue": {
+        "name": "Pizza 3",
+        "category": "Non Veg",
+        "base": "Regular",
+        "type": "Cheese Topping"
+      }
+    },
+    {
+      "id": 4,
+      "category": "nonveg",
+      "base": "multigrain",
+      "type": "nocheese",
+      "url": "../assets/img/2.jpg",
+      "price": 400,
+      "displayValue": {
+        "name": "Pizza 4",
+        "category": "Non Veg",
+        "base": "Multigrain",
+        "type": "No Cheese"
+      }
+    },
+    {
+      "id": 5,
+      "category": "veg",
+      "base": "flatbread",
+      "type": "cheesetopping",
+      "url": "../assets/img/1.jpg",
+      "price": 575,
+      "displayValue": {
+        "name": "Pizza 5",
+        "category": "Veg",
+        "base": "Flatbread",
+        "type": "Cheese Topping"
+      }
+    },
+    {
+      "id": 6,
+      "category": "veg",
+      "base": "thin",
+      "type": "cheeseburst",
+      "url": "../assets/img/1.jpg",
+      "price": 320,
+      "displayValue": {
+        "name": "Pizza 6",
+        "category": "Veg",
+        "base": "Thin Crust",
+        "type": "Cheese Burst"
+      }
+    },
+    {
+      "id": 7,
+      "category": "nonveg",
+      "base": "regular",
+      "type": "cheesetopping",
+      "url": "../assets/img/2.jpg",
+      "price": 480,
+      "displayValue": {
+        "name": "Pizza 7",
+        "category": "Non Veg",
+        "base": "Regular",
+        "type": "Cheese Topping"
+      }
+    },
+    {
+      "id": 8,
+      "category": "nonveg",
+      "base": "multigrain",
+      "type": "nocheese",
+      "url": "../assets/img/2.jpg",
+      "price": 150,
+      "displayValue": {
+        "name": "Pizza 8",
+        "category": "Non Veg",
+        "base": "Multigrain",
+        "type": "No Cheese"
+      }
+    }
+  ]
 };
 
 /* const MockData: any = {

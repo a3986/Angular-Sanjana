@@ -17,10 +17,10 @@
       <img class="img" [src]='product.url'>
       <div class="img-placeholder"></div>
     </div>
-    <h5 class="title">{{product.name}}</h5>
+    <h5 class="title">{{product.displayValue.name}}</h5>
     <div class="row"> 
-    <div class="product-info col-6 col-lg-6 col-sm-12">{{product.base}}</div>
-    <div class="product-info col-6 col-lg-6 col-sm-12">{{product.type}}</div>
+    <div class="product-info col-sm-12">{{product.displayValue.base}}</div>
+    <div class="product-info col-sm-12">{{product.displayValue.type}}</div>
     </div>
     <!-- <p class="price">Rs <span>{{product.price}}</span>/-</p> -->
     <div class="details">
@@ -28,7 +28,7 @@
         <hr>
         <div class="bottom-row row">
           <div class="col-sm-8 view-details-wrapper">
-            <button type="button" class="view" (click)='onProductClick()'>Rs <span>{{product.price}}</span>/-</button>
+            <button type="button" class="view" (click)='onProductClick()'>{{product.price | currency:'INR':'symbol-narrow':'3.0-0'}}</button>
           </div>
           <div class="col-sm-4 add-cart-wrapper">
             <button type="button" class="cart" (click)="onAddToCart()"><img src="../../assets/img/add.svg" alt="" /></button>
