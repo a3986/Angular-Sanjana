@@ -122,7 +122,7 @@ const MockData: any = {
       "category": "veg",
       "base": "regular",
       "type": "cheeseburst",
-      "url": "../assets/img/1.jpg",
+      "url": "assets/img/1.jpg",
       "price": 150,
       "displayValue": {
         "name": "Pizza 1",
@@ -136,7 +136,7 @@ const MockData: any = {
       "category": "veg",
       "base": "thin",
       "type": "cheeseburst",
-      "url": "../assets/img/1.jpg",
+      "url": "assets/img/1.jpg",
       "price": 250,
       "displayValue": {
         "name": "Pizza 2",
@@ -150,7 +150,7 @@ const MockData: any = {
       "category": "nonveg",
       "base": "regular",
       "type": "cheesetopping",
-      "url": "../assets/img/2.jpg",
+      "url": "assets/img/2.jpg",
       "price": 350,
       "displayValue": {
         "name": "Pizza 3",
@@ -164,7 +164,7 @@ const MockData: any = {
       "category": "nonveg",
       "base": "multigrain",
       "type": "nocheese",
-      "url": "../assets/img/2.jpg",
+      "url": "assets/img/2.jpg",
       "price": 400,
       "displayValue": {
         "name": "Pizza 4",
@@ -178,7 +178,7 @@ const MockData: any = {
       "category": "veg",
       "base": "flatbread",
       "type": "cheesetopping",
-      "url": "../assets/img/1.jpg",
+      "url": "assets/img/1.jpg",
       "price": 575,
       "displayValue": {
         "name": "Pizza 5",
@@ -192,7 +192,7 @@ const MockData: any = {
       "category": "veg",
       "base": "thin",
       "type": "cheeseburst",
-      "url": "../assets/img/1.jpg",
+      "url": "assets/img/1.jpg",
       "price": 320,
       "displayValue": {
         "name": "Pizza 6",
@@ -206,7 +206,7 @@ const MockData: any = {
       "category": "nonveg",
       "base": "regular",
       "type": "cheesetopping",
-      "url": "../assets/img/2.jpg",
+      "url": "assets/img/2.jpg",
       "price": 480,
       "displayValue": {
         "name": "Pizza 7",
@@ -220,7 +220,7 @@ const MockData: any = {
       "category": "nonveg",
       "base": "multigrain",
       "type": "nocheese",
-      "url": "../assets/img/2.jpg",
+      "url": "assets/img/2.jpg",
       "price": 150,
       "displayValue": {
         "name": "Pizza 8",
